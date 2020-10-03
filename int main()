@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+/*
+Creator: Rexxxi
+Date:	 3.10.2020
+*/
+
+int main(int argc, char* argv[]) {
+
+	string Instruction_sets[5];                                       // String array that saves entered args. Here only 5 as example.
+
+	/*
+		argc:	The number of entered Args.
+		argv[]:	Char array that saves entered Args
+
+	*/
+
+	if (argc == 1) {
+		cout << "Usage: No arguments \n";                        // If argc  is == 1 -> No entered args.
+
+	}
+	else {                                                           // Else...
+
+		for (int i = 1; i < argc; i++) {
+			Instruction_sets[i] = argv[i];			 // Writtting all entered args. into a string array.
+					                                 // So you have a better access to them and can 																				
+		}			                                 // decide what to do, etc. (I do it like that)
+
+
+		cout << "Instruction_sets list" << endl;	         // Print all entered args to see if all is fine
+		for (int i = 0; i < argc; i++) {
+			cout << Instruction_sets[i] << endl;
+		}
+
+	}                                                                // That's it, hope it was helpful!
+
+	return 0;
+}
